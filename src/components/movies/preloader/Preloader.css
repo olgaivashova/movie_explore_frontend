@@ -1,0 +1,47 @@
+.preloader__container {
+  margin: 0 auto;
+  display: flex;
+  max-width: 1140px;
+  margin-bottom: 89px;
+  margin-top: 90px;
+  background-color: #f9f9f9;
+}
+
+.preloader__button {
+  margin: 0 auto;
+  width: 200px;
+  height: 36px;
+  background-color: #f9f9f9;
+  color: #000000;
+  text-align: center;
+  font-family: "Inter", "Arial" sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: 0px;
+  border: none;
+}
+
+.preloader__button:hover {
+  opacity: 80%;
+  cursor: pointer;
+}
+@media screen and (max-width: 1010px) {
+  .preloader__container {
+    max-width: 708px;
+    margin-bottom: 80px;
+    margin-top: 80px;
+  }
+  .preloader__button {
+    width: 708px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .preloader__container {
+    max-width: 292px;
+  }
+  .preloader__button {
+    width: 292px;
+  }
+}

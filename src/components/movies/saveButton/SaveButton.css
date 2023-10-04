@@ -1,0 +1,18 @@
+.card-button__save-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 100px;
+  justify-self: center;
+  border: none;
+  background-color: #f9f9f9;
+}
+.card-button__save-circle_active {
+  background-color: #2be080;
+}
+.card-button__save-flag {
+  display: block;
+  object-fit: contain;
+  margin: auto;
+  border: 1px solid #e8e8e8;
+  border-bottom: none;
+}

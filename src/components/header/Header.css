@@ -1,0 +1,21 @@
+.header {
+  background-size: 100%;
+  width: 100%;
+  background-color: #465dff;
+  margin: 0 auto;
+}
+
+.header__container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1010px) {
+  .header__container {
+    max-width: 708px;
+  }
+}
+@media screen and (max-width: 620px) {
+  .header__container {
+    max-width: 292px;
+  }
+}
