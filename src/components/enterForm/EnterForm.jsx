@@ -5,12 +5,14 @@ export default function EnterForm(props) {
   return (
     <main>
       <div className={`enter-form enter-form_place_${props.name}`}>
-        <img
-          className="enter-form__logo"
-          src={logo}
-          alt="Логотип searchMovie"
-        />
-        <p className="enter-form__title">{props.title}</p>
+        <Link to="/">
+          <img
+            className="enter-form__logo"
+            src={logo}
+            alt="Логотип searchMovie"
+          />
+        </Link>
+        <h1 className="enter-form__title">{props.title}</h1>
         <form
           className="enter-form__figure"
           action="#"
@@ -23,6 +25,7 @@ export default function EnterForm(props) {
             id="email"
             name="email"
             type="email"
+            placeholder="pochta@yandex.ru"
             value={props.value}
             onChange={props.onChange}
             required
@@ -33,8 +36,11 @@ export default function EnterForm(props) {
             id="password"
             name="password"
             type="password"
+            placeholder="*****"
             value={props.value}
             onChange={props.onChange}
+            minLength={3}
+            maxLength={10}
             required
           />
           <button

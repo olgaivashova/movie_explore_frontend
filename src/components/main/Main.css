@@ -1,15 +1,14 @@
-.movies {
-  margin: 0 auto;
+/* .main__introduction {
   max-width: 1140px;
+  margin: 0 auto;
 }
 @media screen and (max-width: 1140px) {
-  .movies {
+  .main__introduction {
     max-width: 708px;
   }
 }
-
 @media screen and (max-width: 708px) {
-  .movies {
+  .main__introduction {
     max-width: 292px;
   }
-}
+} */

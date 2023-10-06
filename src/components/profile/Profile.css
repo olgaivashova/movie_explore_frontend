@@ -98,9 +98,9 @@
 .profile-container__link_type_update {
   display: none;
 }
-@media screen and (max-width: 1010px) {
+@media screen and (max-width: 1140px) {
   .profile-container {
-    padding-top: 236px;
+    padding-top: 310px;
   }
   .profile-container__greeting {
     padding-bottom: 96px;
@@ -110,10 +110,10 @@
   }
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 708px) {
   .profile-container {
     max-width: 260px;
-    padding-top: 70px;
+    padding-top: 145px;
   }
   .profile-container__greeting {
     padding-bottom: 80px;

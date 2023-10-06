@@ -1,7 +1,7 @@
 .footer {
   background-color: #fafafa;
-  width: 100%;
-  background-size: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 .footer__content {
@@ -62,7 +62,7 @@
   transition: opacity 0.7s;
 }
 
-@media screen and (max-width: 1010px) {
+@media screen and (max-width: 1140px) {
   .footer {
     background-color: #ffffff;
   }
@@ -74,7 +74,7 @@
   }
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 708px) {
   .footer__content {
     max-width: 292px;
   }
@@ -87,7 +87,7 @@
 
   .footer__data {
     justify-content: flex-start;
-    padding-top: 30px;
+    padding-top: 29px;
     flex-direction: column-reverse;
   }
 

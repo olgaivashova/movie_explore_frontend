@@ -24,8 +24,8 @@ export default function AboutProject() {
       <div className="about-project__timing">
         <p className="about-project__timing-text">1 неделя</p>
         <p className="about-project__timing-text">4 недели</p>
-        <p className="about-project__timing-text">Back-end</p>
-        <p className="about-project__timing-text">Front-end</p>
+        <span className="about-project__timing-text">Back-end</span>
+        <span className="about-project__timing-text">Front-end</span>
       </div>
     </section>
   );

@@ -1,8 +1,7 @@
 .checkbox {
-  margin: 0;
+  margin: 0 auto;
   padding-top: 29px;
   display: flex;
-  margin-left: 483px;
 }
 
 .checkbox__switch {
@@ -61,17 +60,15 @@
   text-align: left;
 }
 
-@media screen and (max-width: 1010px) {
+@media screen and (max-width: 1140px) {
   .checkbox {
     padding-top: 30px;
-    margin-left: 267px;
   }
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 708px) {
   .checkbox {
-    padding-top: 39px;
-    margin-left: 72px;
+    padding-top: 35px;
   }
   .checkbox__title {
     font-size: 11px;

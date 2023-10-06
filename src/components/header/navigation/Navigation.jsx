@@ -30,106 +30,125 @@ export default function Navigation({ loggedIn }) {
   }, [location]);
 
   return (
-    <nav className="navigation">
+    <div className="navigation">
       {loggedIn ? (
         <>
-          <div className="navigation__content">
+          <nav className="navigation-content navigation-content_place_movies">
             <Link to="/">
               <img
-                className="navigation__logo"
+                className="navigation-content__logo"
                 src={logo}
                 alt="Логотип searchMovie"
               />
             </Link>
+
             <ul
-              className={`navigation__bar ${
-                burgerNav ? "navigation__bar_active" : "navigation__bar"
+              className={`navigation-content__bar ${
+                burgerNav
+                  ? "navigation-content__bar_type_active"
+                  : "navigation-content__bar"
               }`}
               onClick={handleClick}
             >
-              <div className="navigation__links">
-                {" "}
+              <div className="navigation-content__all-links">
+                <div className="navigation-content__links">
+                  <li>
+                    <Link
+                      to="/"
+                      className={`navigation-content__text ${
+                        burgerNav
+                          ? "navigation-content__text_type_active"
+                          : "navigation-content__text"
+                      }`}
+                    >
+                      Главная
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/movies"
+                      className={`navigation-content__item ${
+                        url === "/movies"
+                          ? "navigation-content__item_type_active"
+                          : ""
+                      }`}
+                    >
+                      Фильмы
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/saved-movies"
+                      className={`navigation-content__item ${
+                        url === "/saved-movies"
+                          ? "navigation-content__item_type_active"
+                          : ""
+                      }`}
+                    >
+                      Сохранённые фильмы
+                    </Link>
+                  </li>
+                </div>
                 <li>
                   <Link
-                    to="/"
-                    className={`navigation__text ${
-                      burgerNav ? "navigation__text_active" : "navigation__text"
-                    }`}
+                    to="/profile"
+                    className="navigation-content__account-group"
                   >
-                    Главная
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/movies"
-                    className={`navigation__item ${
-                      url === "/movies" ? "navigation__item_type_active" : ""
-                    }`}
-                  >
-                    Фильмы
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/saved-movies"
-                    className={`navigation__item ${
-                      url === "/saved-movies"
-                        ? "navigation__item_type_active"
-                        : ""
-                    }`}
-                  >
-                    Сохранённые фильмы
+                    <button
+                      className="navigation-content__account-btn"
+                      type="button"
+                    >
+                      Аккаунт
+                    </button>
+                    <img
+                      className="navigation-content__account-image"
+                      src={account}
+                      alt="иконка аккаунта"
+                    />
                   </Link>
                 </li>
               </div>
-              <li>
-                <Link to="/profile" className="navigation__account-group">
-                  <button className="navigation__account-btn" type="button">
-                    Аккаунт
-                  </button>
-                  <img
-                    className="navigation__account-image"
-                    src={account}
-                    alt="иконка аккаунта"
-                  />
-                </Link>
-              </li>
             </ul>
             <button
-              className={`navigation__burger-btn ${
-                burgerNav ? "navigation__burger-btn_active" : ""
+              className={`navigation-content__burger-btn ${
+                burgerNav ? "navigation-content__burger-btn_type_active" : ""
               }`}
               onClick={handleClick}
             ></button>
-          </div>
+          </nav>
         </>
       ) : (
         <>
-          <ul className="navigation__content">
+          <nav className="navigation-content navigation-content_place_main">
             <li>
-              <img
-                className="navigation__logo"
-                src={logo}
-                alt="Логотип searchMovie"
-              />
+              <Link to="/">
+                <img
+                  className="navigation-content__logo"
+                  src={logo}
+                  alt="Логотип searchMovie"
+                />
+              </Link>
             </li>
-            <div className="navigation__buttons">
+            <div className="navigation-content__buttons">
               <li>
-                <Link to="/signup" className="navigation__signup">
+                <Link to="/signup" className="navigation-content__signup">
                   Регистрация
                 </Link>
               </li>
               <li>
                 <Link to="/signin">
-                  <button className="navigation__signin-button" type="button">
+                  <button
+                    className="navigation-content__signin-button"
+                    type="button"
+                  >
                     Войти
                   </button>
                 </Link>
               </li>
             </div>
-          </ul>
+          </nav>
         </>
       )}
-    </nav>
+    </div>
   );
 }

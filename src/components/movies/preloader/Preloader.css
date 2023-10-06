@@ -1,9 +1,9 @@
-.preloader__container {
+.preloader {
   margin: 0 auto;
   display: flex;
   max-width: 1140px;
-  margin-bottom: 89px;
-  margin-top: 90px;
+  margin-bottom: 80px;
+  margin-top: 80px;
   background-color: #f9f9f9;
 }
 
@@ -26,8 +26,8 @@
   opacity: 80%;
   cursor: pointer;
 }
-@media screen and (max-width: 1010px) {
-  .preloader__container {
+@media screen and (max-width: 1140px) {
+  .preloader {
     max-width: 708px;
     margin-bottom: 80px;
     margin-top: 80px;
@@ -37,8 +37,8 @@
   }
 }
 
-@media screen and (max-width: 620px) {
-  .preloader__container {
+@media screen and (max-width: 708px) {
+  .preloader {
     max-width: 292px;
   }
   .preloader__button {

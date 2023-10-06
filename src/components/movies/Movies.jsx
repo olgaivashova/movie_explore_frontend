@@ -7,7 +7,7 @@ import Preloader from "./preloader/Preloader";
 export default function Movies() {
   return (
     <main>
-      <section className="movies__container">
+      <section className="movies">
         <SearchForm />
         <MoviesCardList />
         <Preloader />

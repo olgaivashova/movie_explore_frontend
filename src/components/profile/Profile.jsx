@@ -11,7 +11,7 @@ export default function Profile(props) {
   return (
     <main>
       <section className="profile-container">
-        <p className="profile-container__greeting">Привет, .....!</p>
+        <h1 className="profile-container__greeting">Привет, .....!</h1>
         <form className="profile-container__form">
           <div className="profile-container__row">
             <label className="profile-container__label">Имя</label>
