@@ -25,7 +25,7 @@ export default function EnterForm(props) {
             id="email"
             name="email"
             type="email"
-            placeholder="pochta@yandex.ru"
+            placeholder="Введите e-mail"
             value={props.value}
             onChange={props.onChange}
             required
@@ -36,7 +36,7 @@ export default function EnterForm(props) {
             id="password"
             name="password"
             type="password"
-            placeholder="*****"
+            placeholder="Введите пароль"
             value={props.value}
             onChange={props.onChange}
             minLength={3}

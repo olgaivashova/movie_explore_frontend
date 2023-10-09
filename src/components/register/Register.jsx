@@ -15,7 +15,7 @@ const Register = () => {
             id="register-input"
             type="text"
             className="enter-form__input enter-form__input_type_name"
-            placeholder="Василий"
+            placeholder="Введите имя"
             minLength={2}
             maxLength={10}
             name="name"

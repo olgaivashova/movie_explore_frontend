@@ -1,7 +1,10 @@
 .header {
   max-width: 1280px;
-  background-color: #465dff;
+  background-color: #ffff;
   margin: 0 auto;
+}
+.header_place_main {
+  background-color: #465dff;
 }
 
 .header__container {

@@ -17,7 +17,7 @@ export default function Profile(props) {
             <label className="profile-container__label">Имя</label>
             <input
               className="profile-container__input profile-container__input_type_name"
-              placeholder="Василий"
+              placeholder="Введите имя"
               id="name"
               name="name"
               type="text"
@@ -30,7 +30,7 @@ export default function Profile(props) {
             <label className="profile-container__label">E-mail</label>
             <input
               className="profile-container__input profile-container__input_type_email"
-              placeholder="pochta@yandex.ru"
+              placeholder="Введите e-mail"
               id="email"
               name="email"
               type="email"
