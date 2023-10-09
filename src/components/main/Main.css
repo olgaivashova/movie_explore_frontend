@@ -1,0 +1,14 @@
+/* .main__introduction {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1140px) {
+  .main__introduction {
+    max-width: 708px;
+  }
+}
+@media screen and (max-width: 708px) {
+  .main__introduction {
+    max-width: 292px;
+  }
+} */

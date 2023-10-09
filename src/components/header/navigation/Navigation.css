@@ -1,0 +1,322 @@
+/* для блока LOGGEDIN */
+
+.navigation-content__bar {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  margin-left: 28px;
+}
+
+.navigation-content__logo {
+  width: 38px;
+  height: 38px;
+  display: block;
+  background-color: transparent;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.navigation-content__logo:hover {
+  opacity: 70%;
+  transition: opacity 0.7s;
+  cursor: pointer;
+}
+
+.navigation-content__all-links {
+  display: flex;
+  width: 1075px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation-content__links {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.navigation-content__item {
+  margin: 0;
+  font-family: "Inter", "Arial" sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #000000;
+  text-decoration: none;
+}
+
+.navigation-content__item:hover {
+  opacity: 70%;
+  transition: opacity 0.7s;
+  cursor: pointer;
+}
+
+.navigation-content__item_type_active {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.navigation-content__text {
+  display: none;
+}
+
+.navigation-content__account-group {
+  display: flex;
+  text-decoration: none;
+  gap: 17px;
+}
+
+.navigation-content__account-group:hover {
+  opacity: 70%;
+  transition: opacity 0.7s;
+}
+
+.navigation-content__account-btn {
+  background-color: transparent;
+  border: none;
+  font-family: "Inter", "Arial" sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.navigation-content__account-image {
+  width: 11.5px;
+  height: 14px;
+  display: block;
+  object-fit: cover;
+  background-color: #2be080;
+  padding: 7.5px;
+}
+
+.navigation-content__burger-btn {
+  background-image: url("../../../images/burger.svg");
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: none;
+  z-index: 3;
+  top: 18px;
+  right: 0;
+  position: absolute;
+}
+.navigation-content__burger-btn:hover {
+  opacity: 70%;
+  transition: opacity 0.7s;
+  cursor: pointer;
+}
+.navigation-content__burger-btn_type_active {
+  background-image: url("../../../images/close_burger.svg");
+  background-color: transparent;
+  width: 28px;
+  height: 28px;
+  border: none;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 3;
+}
+.navigation-content__burger-btn_type_active:hover {
+  opacity: 70%;
+  transition: opacity 0.7s;
+  cursor: pointer;
+}
+@media screen and (max-width: 1140px) {
+  .navigation-content__bar {
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: -116%;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: top 1s;
+    overflow: hidden;
+    backdrop-filter: blur(2px);
+  }
+  .navigation-content__bar_type_active {
+    top: 0;
+  }
+  .navigation-content__all-links {
+    display: flex;
+    flex-direction: column;
+    max-width: 520px;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #ffffff;
+    z-index: 3;
+    margin-left: 218px;
+  }
+
+  .navigation-content__links {
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    margin-top: 158px;
+    margin-left: 0;
+    gap: 26px;
+    text-align: center;
+  }
+  .navigation-content__item {
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+  }
+  .navigation-content__item_type_active {
+    border-bottom: 2px solid black;
+    padding-bottom: 4px;
+  }
+  .navigation-content__text {
+    display: block;
+    margin: 0;
+    font-family: "Inter", "Arial" sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-decoration: none;
+    color: black;
+  }
+  .navigation-content__account-group {
+    display: flex;
+    text-decoration: none;
+    gap: 17px;
+    margin-bottom: 92px;
+    margin-top: 621px;
+  }
+  .navigation-content__account-btn {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    text-align: center;
+    color: black;
+  }
+  .navigation-content__account-image {
+    background-color: transparent;
+  }
+
+  .navigation-content__burger-btn {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 708px) {
+  .navigation-content__bar {
+    margin-left: 0;
+  }
+  .navigation-content__bar_type_active {
+    top: 0;
+  }
+  .navigation-content__all-links {
+    width: 322px;
+    margin: 0 auto;
+    margin-left: 0;
+  }
+  .navigation-content__links {
+    margin-top: 148px;
+    gap: 24px;
+  }
+  .navigation-content__account-group {
+    margin-bottom: 48px;
+    margin-top: 444px;
+  }
+}
+
+/* Блок для MAIN */
+
+.navigation-content {
+  margin: 0 auto;
+  display: flex;
+  max-width: 1140px;
+  list-style: none;
+  padding: 0;
+  position: relative;
+}
+
+.navigation-content_place_main {
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 1140px) {
+  .navigation-content {
+    max-width: 708px;
+  }
+}
+
+@media screen and (max-width: 708px) {
+  .navigation-content {
+    max-width: 292px;
+  }
+}
+
+.navigation-content__buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation-content__signup {
+  color: white;
+  background-color: transparent;
+  border: none;
+  font-family: "Inter", "Arial" sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0px;
+  text-decoration: none;
+  margin: 0;
+}
+
+.navigation-content__signup:hover {
+  opacity: 70%;
+  transition: opacity 0.7s;
+  cursor: pointer;
+}
+
+.navigation-content__signin-button {
+  color: black;
+  font-family: "Inter", "Arial" sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0px;
+  text-align: center;
+  background-color: #2be080;
+  width: 76px;
+  height: 32px;
+  border: none;
+  border-radius: 3px;
+  margin-left: 30px;
+}
+
+.navigation-content__signin-button:hover {
+  opacity: 70%;
+  transition: opacity 0.7s;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 708px) {
+  .navigation-content__signup {
+    font-size: 10px;
+  }
+  .navigation-content__signin-button {
+    margin-left: 14px;
+    width: 54px;
+    height: 26px;
+    font-size: 10px;
+  }
+}
