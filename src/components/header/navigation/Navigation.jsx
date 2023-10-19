@@ -1,10 +1,12 @@
 import "./Navigation.css";
 import account from "../../../images/header_loggedIn-icon.svg";
 import { Link, useLocation } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import logo from "../../../images/header-logo.svg";
+import { CurrentUserContext } from "../../../contexts/CurrentUserContext";
 
-export default function Navigation({ loggedIn }) {
+export default function Navigation() {
+  const user = useContext(CurrentUserContext);
   const location = useLocation();
   const [url, setUrl] = useState(null);
   const [burgerNav, setBurgerNav] = useState(false);
@@ -12,18 +14,6 @@ export default function Navigation({ loggedIn }) {
   const handleClick = () => {
     setBurgerNav(!burgerNav);
   };
-  useEffect(() => {
-    function closeBurger() {
-      if (document.documentElement.clientWidth > 1010) {
-        setBurgerNav(false);
-        window.removeEventListener("resize", closeBurger);
-      }
-    }
-    if (burgerNav === true) {
-      window.addEventListener("resize", closeBurger);
-      return () => window.removeEventListener("resize", closeBurger);
-    }
-  }, [burgerNav]);
 
   useEffect(() => {
     setUrl(location.pathname);
@@ -31,7 +21,7 @@ export default function Navigation({ loggedIn }) {
 
   return (
     <div className="navigation">
-      {loggedIn ? (
+      {user.isLoggedIn ? (
         <>
           <nav className="navigation-content navigation-content_place_movies">
             <Link to="/">

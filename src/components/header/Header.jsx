@@ -2,7 +2,7 @@ import React from "react";
 import "./Header.css";
 import Navigation from "./navigation/Navigation";
 
-export default function Header({ loggedIn, name }) {
+export default function Header({ name }) {
   return (
     <header
       className={`header header_place_${name} ${
@@ -10,7 +10,7 @@ export default function Header({ loggedIn, name }) {
       }`}
     >
       <div className="header__container">
-        <Navigation loggedIn={loggedIn} />
+        <Navigation />
       </div>
     </header>
   );

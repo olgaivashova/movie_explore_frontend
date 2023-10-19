@@ -1,5 +1,5 @@
 import "./Promo.css";
-import globus from "../../../images/globus of words.svg";
+import globus from "../../../images/globus-of-words.svg";
 
 export default function Promo() {
   return (
@@ -14,8 +14,7 @@ export default function Promo() {
               Листайте ниже, чтобы узнать больше про этот проект и его
               создателя.
             </p>
-
-            <a href="#aboutProject" className="promo__link">
+            <a href="/#aboutProject" className="promo__link">
               Узнать больше
             </a>
           </div>
