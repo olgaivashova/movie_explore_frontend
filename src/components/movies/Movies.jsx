@@ -75,8 +75,8 @@ export default function Movies({savedMovies, setSavedMovies, beatMovies, setBeat
     }
   }, []);
 
-  function handleCheckbox(evt) {
-    handleCheckboxChange(evt);
+  async function handleCheckbox(evt) {
+    await handleCheckboxChange(evt);
     if (beatMovies.length === 0) {
       loadBeatMovies()
         .then(movies => filterMovies(search, evt.target.checked, movies))
@@ -105,7 +105,7 @@ export default function Movies({savedMovies, setSavedMovies, beatMovies, setBeat
       .then(() => {
         movie.saved = false;
         handleStorages(movie)
-        setSavedMovies(prev => prev.filter(item => item["_id"] !== movie.movieId))
+        setSavedMovies(prev => prev.filter(item => item.movieId !== movie.id))
       })
       .catch(err => {
         setServerError(true);

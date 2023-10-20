@@ -3,16 +3,16 @@ import { useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import MoviesCard from './moviesCard/MoviesCard';
 import {
-  addOnLargeScreen, addOnMediumScreen,
-  initialOnLargeScreen,
-  initialOnMediumScreen,
-  initialOnSmallScreen, mediumScreenSize,
-  smallScreenSize
+  ADD_ON_LARGE_SCREEN, ADD_ON_MEDIUM_SCREEN,
+  INITIAL_SCREEN_SIZE,
+  INITIAL_ON_MEDIUM_SCREEN,
+  INITIAL_ON_SMALL_SCREEN, MEDIUM_SCREEN_SIZE,
+  SMALL_SCREEN_SIZE
 } from "../../utils/constants";
 
 export default function MoviesCardList({filteredMovies, onSave, onUndoSaveMovie, serverError, isEmptySearch, onDelete}) {
   const {pathname} = useLocation();
-  const [amount, setAmount] = useState({init: initialOnLargeScreen, add: addOnLargeScreen});
+  const [amount, setAmount] = useState({init: INITIAL_SCREEN_SIZE, add: ADD_ON_LARGE_SCREEN});
   const [movieAmount, setMovieAmount] = useState(0);
   const [isAddPresent, setIsAddPresent] = useState(false);
 
@@ -32,12 +32,12 @@ export default function MoviesCardList({filteredMovies, onSave, onUndoSaveMovie,
 
   useEffect(() => {
     function displayByResizing() {
-      if (window.innerWidth <= smallScreenSize) {
-        setAmount({init: initialOnSmallScreen, add: addOnMediumScreen});
-      } else if (window.innerWidth > smallScreenSize && window.innerWidth <= mediumScreenSize) {
-        setAmount({init: initialOnMediumScreen, add: addOnMediumScreen});
+      if (window.innerWidth <= SMALL_SCREEN_SIZE) {
+        setAmount({init: INITIAL_ON_SMALL_SCREEN, add: ADD_ON_MEDIUM_SCREEN});
+      } else if (window.innerWidth > SMALL_SCREEN_SIZE && window.innerWidth <= MEDIUM_SCREEN_SIZE) {
+        setAmount({init: INITIAL_ON_MEDIUM_SCREEN, add: ADD_ON_MEDIUM_SCREEN});
       } else {
-        setAmount({init: initialOnLargeScreen, add: addOnLargeScreen});
+        setAmount({init: INITIAL_SCREEN_SIZE, add: ADD_ON_LARGE_SCREEN});
       }
     }
 

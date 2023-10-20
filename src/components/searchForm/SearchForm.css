@@ -17,8 +17,7 @@
   border: none;
   border-bottom: 1px solid rgba(232, 232, 232);
   margin: 0;
-  padding: 0;
-  padding-bottom: 14px;
+  padding: 0 0 14px;
 }
 
 .search-form__image-loop {
@@ -35,9 +34,10 @@
   font-size: 19px;
   font-weight: 400;
   line-height: 21px;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   text-align: left;
   border: none;
+  flex: 1;
 }
 
 .search-form__input:focus {
@@ -51,7 +51,6 @@
 .search-form__error {
   visibility: hidden;
   color: #ff004c;
-  font-family: "Inter", "Arial", sans-serif;
   font-size: 12px;
   font-weight: 500;
   line-height: 17px;
