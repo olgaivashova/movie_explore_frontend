@@ -1,22 +1,17 @@
-import React, { useState } from "react";
 import "./FilterCheckbox.css";
 
-export default function FilterCheckbox() {
-  const [checked, setChecked] = useState(false);
-
-  function changeCheckbox() {
-    setChecked(!checked);
-  }
+export default function FilterCheckbox({onCheckbox, isSwitched, isDisabled}) {
   return (
     <div className="checkbox">
       <label className="checkbox__switch">
         <input
+          name="checkbox"
           type="checkbox"
           role="switch"
           value=""
-          checked={checked}
-          onChange={changeCheckbox}
-          name="checkbox"
+          checked={isSwitched}
+          onChange={onCheckbox}
+          disabled={isDisabled}
         />
         <span className="checkbox__slider"></span>
       </label>

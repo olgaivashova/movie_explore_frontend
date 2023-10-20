@@ -1,10 +1,22 @@
-import logo from "../../images/header-logo.svg";
-import "./EnterForm.css";
-import { Link } from "react-router-dom";
-export default function EnterForm(props) {
+import logo from '../../images/header-logo.svg';
+import './EnterForm.css';
+import { Link } from 'react-router-dom';
+
+export default function EnterForm(
+  {
+    name,
+    title,
+    button,
+    text,
+    children,
+    onSubmit,
+    isValid,
+    resError
+  }) {
+
   return (
     <main>
-      <div className={`enter-form enter-form_place_${props.name}`}>
+      <div className={`enter-form enter-form_place_${name}`}>
         <Link to="/">
           <img
             className="enter-form__logo"
@@ -12,61 +24,44 @@ export default function EnterForm(props) {
             alt="Логотип searchMovie"
           />
         </Link>
-        <h1 className="enter-form__title">{props.title}</h1>
+        <h1 className="enter-form__title">{title}</h1>
         <form
           className="enter-form__figure"
-          action="#"
-          onSubmit={props.onSubmit}
+          onSubmit={onSubmit}
+          noValidate
         >
-          {props.children}
-          <label className="enter-form__label">E-mail</label>
-          <input
-            className="enter-form__input enter-form__input_type_email"
-            id="email"
-            name="email"
-            type="email"
-            placeholder="Введите e-mail"
-            value={props.value}
-            onChange={props.onChange}
-            required
-          />
-          <label className="enter-form__label">Пароль</label>
-          <input
-            className="enter-form__input enter-form__input_type_password"
-            id="password"
-            name="password"
-            type="password"
-            placeholder="Введите пароль"
-            value={props.value}
-            onChange={props.onChange}
-            minLength={3}
-            maxLength={10}
-            required
-          />
-          <button
-            className={`"enter-form__button" ${
-              props.name === "register"
-                ? "enter-form__button_place_register"
-                : "enter-form__button"
-            }`}
-            type="submit"
+          {children}
+          <span
+            className={`enter-form__result-error ${
+              name === 'register' && 'enter-form__result-error_place_register'
+            } ${resError ? 'enter-form__result-error_type_active' : ''}`}
           >
-            {props.button}
+            {resError}
+          </span>
+          <button
+            className={`enter-form__button ${
+              name === 'register'
+                ? 'enter-form__button_place_register'
+                : 'enter-form__button'
+            }
+            ${!isValid ? 'enter-form__button_type_disable' : ''}`}
+            type="submit"
+            disabled={!isValid}
+          >
+            {button}
           </button>
         </form>
         <div className="enter-form__text">
-          <p className="enter-form__paragraph">{props.text}</p>
-
-          {props.name === "register" || props.name === "login" ? (
-            <Link
-              to={props.name === "register" ? "/signin" : "/signup"}
-              className="enter-form__link"
-            >
-              {props.name === "register" ? "Войти" : "Регистрация"}
-            </Link>
-          ) : (
-            <></>
-          )}
+          <p className="enter-form__paragraph">{text}</p>
+          {name === 'register' || name === 'login' ?
+            (
+              <Link
+                to={name === 'register' ? '/signin' : '/signup'}
+                className="enter-form__link"
+              >
+                {name === 'register' ? 'Войти' : 'Регистрация'}
+              </Link>
+            ) : null}
         </div>
       </div>
     </main>
